@@ -156,7 +156,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Slidable(
                       key: const ValueKey(0),
                       startActionPane: ActionPane(
-                        motion: ScrollMotion(),
+                        motion: const ScrollMotion(),
                         children: [
                           SlidableAction(
                             onPressed: (_) {
@@ -164,7 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 state.todos[i],
                               );
                             },
-                            backgroundColor: Color(0xFFFE4A49),
+                            backgroundColor: const Color(0xFFFE4A49),
                             foregroundColor: Colors.white,
                             icon: Icons.delete,
                             label: 'Delete',
@@ -173,7 +173,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       child: ListTile(
                         title: Text(state.todos[i].title),
-                        subtitle: Text(state.todos[i].title),
+                        subtitle: Text(state.todos[i].subtitle),
                         trailing: Checkbox(
                           value: state.todos[i].isDone,
                           activeColor: Theme.of(context).colorScheme.secondary,
