@@ -7,7 +7,7 @@ part 'todo_event.dart';
 part 'todo_state.dart';
 
 class TodoBloc extends HydratedBloc<TodoEvent, TodoState> {
-  TodoBloc() : super(TodoState()) {
+  TodoBloc() : super(const TodoState()) {
     on<TodoStarted>(_onStarted);
     on<AddTodo>(_onAddTodo);
     on<RemoveTodo>(_onRemoveTodo);

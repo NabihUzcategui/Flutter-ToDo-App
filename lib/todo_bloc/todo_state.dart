@@ -7,7 +7,7 @@ class TodoState extends Equatable {
   final List<Todo> todos;
   final TodoStatus status;
 
-  TodoState({
+  const TodoState({
     this.todos = const <Todo>[],
     this.status = TodoStatus.initial,
   });
